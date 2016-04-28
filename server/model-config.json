@@ -27,14 +27,16 @@
     "dataSource": "db",
     "public": false
   },
-  "Email": {
-    "dataSource": "emailDs"
-  },
   "user": {
     "dataSource": "db",
-    "public": true,
-    "options": {
-      "emailVerificationRequired": true
-    }
+    "public": true
+  },
+  "team": {
+    "dataSource": "db",
+    "public": false
+  },
+  "project": {
+    "dataSource": "db",
+    "public": true
   }
 }

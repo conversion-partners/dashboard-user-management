@@ -1,23 +1,23 @@
 {
-  "name": "user",
-  "base": "User",
+  "name": "team",
+  "base": "PersistedModel",
   "idInjection": true,
   "properties": {
-    "username": {
-      "type": "string"
+    "ownerId": {
+      "type": "string",
+      "required": true
+    },
+    "memberId": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],
   "relations": {
-    "projects": {
+    "members": {
       "type": "hasMany",
-      "model": "project",
-      "foreignKey": "ownerId"
-    },
-    "teams": {
-      "type": "hasMany",
-      "model": "team",
-      "foreignKey": "ownerId"
+      "model": "user",
+      "foreignKey": "memberId"
     }
   },
   "acls": [
